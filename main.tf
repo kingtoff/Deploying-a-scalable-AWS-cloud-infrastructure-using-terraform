@@ -45,3 +45,10 @@ terraform {
   db_user_name = var.db_user_name
   db_user_password = var.db_user_password
  }
+
+ module "webserver" {
+   source = "./modules/webserver"
+    #Web server (EC2 Instances) Input vars
+  cloud_vpc_id =  module.vpc.cloud_vpc_id
+  cloud_public_subnets = module.vpc.cloud_public_subnets
+ }
