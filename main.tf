@@ -33,3 +33,15 @@ terraform {
   public_subnet_cidrs = local.public_subnet_cidrs
   private_subnet_cidrs = local.private_subnet_cidrs
  }
+ module "database" {
+   source = "./modules/database"
+     #RDS Input Vars
+  cloud_vpc_id          = module.vpc.cloud_vpc_id
+  cloud_private_subnets = module.vpc.cloud_private_subnets
+  cloud_private_subnet_cidrs = local.private_subnet_cidrs
+
+  db_az = local.availability_zones[0]
+  db_name = "clouddatabaseInstance"
+  db_user_name = var.db_user_name
+  db_user_password = var.db_user_password
+ }
