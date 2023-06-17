@@ -1,5 +1,6 @@
 # Deploying-a-resilient-reliable-and-highly-scalable-server-based-cloud-infrastructure
 # Provisioning-a-Webserver-Infrastructure-using-Terraform
+![Deploying architecture (3)](https://github.com/kingtoff/Deploying-a-scalable-AWS-cloud-infrastructure-using-terraform/assets/99415191/0455a3e2-4a07-4f34-8001-925f647a1541)
 
 ### This repository contains the Terraform code and configuration files to deploy a 3-tier web application on AWS. The application consists of a frontend web server, a backend application server, and a database server, all deployed in separate EC2 instances.
 
