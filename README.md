@@ -20,9 +20,8 @@ Once the deployment is complete, we can access the frontend web server by naviga
 ### The 3-tier web application is deployed using the following architecture:
 
 1. The frontend web server is deployed in a public subnet and is accessible via an Elastic IP address.
-2. The is deployed in a private subnet and is not accessible from the internet.
-3. The database server is deployed in a private subnet and is not accessible from the internet.
-4. All instances are deployed using Amazon Linux 2 and are running the latest version of the required software.
+2. The database server is deployed in a private subnet and is not accessible from the internet.
+3. All instances are deployed using Amazon Linux 2 and are running the latest version of the required software.
 
 ## Resources Created
 ### The following AWS resources are created by the Terraform code and the functions they hold:
