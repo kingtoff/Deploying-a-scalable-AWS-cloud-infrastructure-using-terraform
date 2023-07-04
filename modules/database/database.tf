@@ -29,7 +29,7 @@ resource "aws_security_group" "cloudDBSecurityGroup" {
   }
 }
 
-resource "aws_db_instance" "cloudRDS" {
+resource "aws_db_instance" "cloudrds" {
   availability_zone = var.db_az
   db_subnet_group_name = aws_db_subnet_group.Cloud-DBSubnetGroup.name
   vpc_security_group_ids = [ aws_security_group.cloudDBSecurityGroup.id]
@@ -37,13 +37,13 @@ resource "aws_db_instance" "cloudRDS" {
   storage_type = "standard"
   engine = "postgres"
   engine_version = "12"
-  instance_class = "db.t2.micro"
+  instance_class = "db.t3.micro"
   name = var.db_name
   username = var.db_user_name
   password = var.db_user_password
   skip_final_snapshot = true
   tags = {
-    Name = "cloudRDS"
+    Name = "cloudrds"
     Project = "Demo"
   }
 }
